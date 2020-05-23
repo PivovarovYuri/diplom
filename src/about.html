@@ -6,7 +6,7 @@
         <meta name="author" content="Юрий Пивоваров">
         <meta name="description" content="NewsAnalyzer — это дипломный проект студента Яндекс.Практикума">
         <title>NewsAnalyzer - клиентам</title>
-        <link rel="shortcut icon" href="<%=require('./images/favicon.png')%>" type="image/x-icon">
+        <link rel="shortcut icon" href="<%=require('./images/favicon.png').default%>" type="image/x-icon">
         <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
     </head>
 
@@ -30,25 +30,25 @@
                 <div class="tech__container">
                     <div class="tech__pic-container">
                         <p class="tech__pic-title">HTML</p>
-                        <img src="<%=require('./images/html.png')%>" alt="HTML" class="tech__pic">
+                        <img src="<%=require('./images/html.png').default%>" alt="HTML" class="tech__pic">
                     </div>
                     <div class="tech__pic-container">
                         <p class="tech__pic-title">CSS</p>
-                        <img src="<%=require('./images/css.png')%>" alt="CSS" class="tech__pic">
+                        <img src="<%=require('./images/css.png').default%>" alt="CSS" class="tech__pic">
                     </div>
                     <div class="tech__pic-container">
                         <p class="tech__pic-title">Java Script</p>
-                        <img src="<%=require('./images/js.png')%>" alt="Java Script" class="tech__pic">
+                        <img src="<%=require('./images/js.png').default%>" alt="Java Script" class="tech__pic">
                     </div>
                     <div class="tech__pic-container">
                         <p class="tech__pic-title">Webpack</p>
-                        <img src="<%=require('./images/webpack.png')%>" alt="Webpack" class="tech__pic">
+                        <img src="<%=require('./images/webpack.png').default%>" alt="Webpack" class="tech__pic">
                     </div>
                 </div>
             </section>
 
             <section class="author">
-                <img src="<%=require('./images/avatar.jpeg')%>" alt="Аватар" class="author__avatar">
+                <img src="<%=require('./images/avatar.jpeg').default%>" alt="Аватар" class="author__avatar">
 
                 <div class="author__container">
                     <h2 class="author__title">Об авторе</h2>
@@ -68,7 +68,7 @@
                             <div class="commits__card">
                                 <p class="commits__date">14 августа, 2019</p>
                                 <div class="commits__personal">
-                                    <img src="<%=require('./images/commit-avatar.png')%>" alt="Аватар с коммита" class="commits__avatar">
+                                    <img src="<%=require('./images/commit-avatar.png').default%>" alt="Аватар с коммита" class="commits__avatar">
                                     <div class="commits__name-mail">
                                         <p class="commits__name">Антон Долинин</p>
                                         <p class="commits__mail">anton@yandex.ru</p>
@@ -83,7 +83,7 @@
                             <div class="commits__card">
                                 <p class="commits__date">14 августа, 2019</p>
                                 <div class="commits__personal">
-                                    <img src="<%=require('./images/commit-avatar.png')%>" alt="Аватар с коммита" class="commits__avatar">
+                                    <img src="<%=require('./images/commit-avatar.png').default%>" alt="Аватар с коммита" class="commits__avatar">
                                     <div class="commits__name-mail">
                                         <p class="commits__name">Антон Долинин</p>
                                         <p class="commits__mail">anton@yandex.ru</p>
@@ -97,22 +97,7 @@
                             <div class="commits__card">
                                 <p class="commits__date">14 августа, 2019</p>
                                 <div class="commits__personal">
-                                    <img src="<%=require('./images/commit-avatar.png')%>" alt="Аватар с коммита" class="commits__avatar">
-                                    <div class="commits__name-mail">
-                                        <p class="commits__name">Антон Долинин</p>
-                                        <p class="commits__mail">anton@yandex.ru</p>
-                                    </div>
-                                </div>
-
-                                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="commits__card">
-                                <p class="commits__date">14 августа, 2019</p>
-                                <div class="commits__personal">
-                                    <img src="<%=require('./images/commit-avatar.png')%>" alt="Аватар с коммита" class="commits__avatar">
+                                    <img src="<%=require('./images/commit-avatar.png').default%>" alt="Аватар с коммита" class="commits__avatar">
                                     <div class="commits__name-mail">
                                         <p class="commits__name">Антон Долинин</p>
                                         <p class="commits__mail">anton@yandex.ru</p>
@@ -127,7 +112,22 @@
                             <div class="commits__card">
                                 <p class="commits__date">14 августа, 2019</p>
                                 <div class="commits__personal">
-                                    <img src="<%=require('./images/commit-avatar.png')%>" alt="Аватар с коммита" class="commits__avatar">
+                                    <img src="<%=require('./images/commit-avatar.png').default%>" alt="Аватар с коммита" class="commits__avatar">
+                                    <div class="commits__name-mail">
+                                        <p class="commits__name">Антон Долинин</p>
+                                        <p class="commits__mail">anton@yandex.ru</p>
+                                    </div>
+                                </div>
+
+                                <p class="commits__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="commits__card">
+                                <p class="commits__date">14 августа, 2019</p>
+                                <div class="commits__personal">
+                                    <img src="<%=require('./images/commit-avatar.png').default%>" alt="Аватар с коммита" class="commits__avatar">
                                     <div class="commits__name-mail">
                                         <p class="commits__name">Антон Долинин</p>
                                         <p class="commits__mail">anton@yandex.ru</p>
@@ -139,8 +139,8 @@
                     </div>
 
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"><img src="<%=require('./images/slider-control-prev.png')%>" alt="Стрелка предыдущее" class="commits__button"></div>
-                    <div class="swiper-button-next"><img src="<%=require('./images/slider-control-next.png')%>" alt="Стрелка следующее" class="commits__button"></div>
+                    <div class="swiper-button-prev"><img src="<%=require('./images/slider-control-prev.png').default%>" alt="Стрелка предыдущее" class="commits__button"></div>
+                    <div class="swiper-button-next"><img src="<%=require('./images/slider-control-next.png').default%>" alt="Стрелка следующее" class="commits__button"></div>
                 </div>
 
                 <a href="https://github.com/PivovarovYuri/" class="commits__link" target="_blank">Открыть в GitHub</a>
@@ -156,8 +156,8 @@
                 </div>
 
                 <div class="footer__social-container">
-                    <a href="https://github.com/PivovarovYuri/" class="footer__social link" target="_blank"><img src="<%=require('./images/Vector2.svg')%>" alt="Иконка GitHub" class="footer__social-image"></a>
-                    <a href="https://www.facebook.com/" class="footer__social link" target="_blank"><img src="<%=require('./images/Vector.svg')%>" alt="Иконка Facebook" class="footer__social-image"></a>
+                    <a href="https://github.com/PivovarovYuri/" class="footer__social link" target="_blank"><img src="<%=require('./images/Vector2.svg').default%>" alt="Иконка GitHub" class="footer__social-image"></a>
+                    <a href="https://www.facebook.com/" class="footer__social link" target="_blank"><img src="<%=require('./images/Vector.svg').default%>" alt="Иконка Facebook" class="footer__social-image"></a>
                 </div>
             </footer>
         </main>
