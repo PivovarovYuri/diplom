@@ -7,7 +7,7 @@
         <meta name="description" content="NewsAnalyzer - анализ популярности новостей">
         <title>NewsAnalyzer - главная</title>
         <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
-        <link rel="stylesheet" href="style.d759330bf99d76cdb173.css">
+        <link rel="stylesheet" href="style.e719773565e1bf7efce3.css">
     </head>
 
     <body class="body">
@@ -27,37 +27,38 @@
 
                 <form class="search__form" name="search">
                     <input type="text" name="news" class="search__input" placeholder="Введите тему новости">
+                    <span class="search__error" aria-live="polite"></span>
                     <button class="search__button">Искать</button>
                 </form>
             </section>
 
-            <section class="error">
-                <img src="./images/not-found.png" alt="Не найдено" class="error__pic">
-                <p class="error__title">Ничего не найдено</p>
-                <p class="error__comment">К сожалению по вашему запросу ничего не найдено.</p>
-            </section>
-
             <section class="results">
-                <div class="results__title-container">
-                    <h2 class="results__title">Результаты поиска</h2>
-                    <a href="./analytics.html" class="results__analytics link">Посмотреть аналитику &gt;</a>
-                </div>
+              <div class="results__title-container">
+                  <h2 class="results__title">Результаты поиска</h2>
+                  <a href="./analytics.html" class="results__analytics link">Посмотреть аналитику &gt;</a>
+              </div>
 
-                <div class="results__card-container">
-                    <div class="results__card">
-                        <img src="./images/news.png" alt="Иллюстрация новости" class="results__card-pic">
+              <div class="results__preloader">
+                  <i class="results__preloader-spinner"></i>
+                  <p class="results__preloader-comment">Идет поиск новостей...</p>
+              </div>
 
-                        <div class="results__card-description">
-                            <p class="results__card-date">2 августа, 2019</p>
-                            <h3 class="results__card-title">Национальное достояние - парки</h3>
-                            <p class="results__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                            <a href="https://lenta.ru/" class="results__card-portal link" target="_blank">ЛЕНТА.РУ</a>
-                        </div>
-                    </div>
-                </div>
+              <div class="results__error results__error_search">
+                  <img src="./images/not-found.png" alt="Не найдено" class="results__error-pic">
+                  <p class="results__error-title">Ничего не найдено</p>
+                  <p class="results__error-comment">К сожалению по вашему запросу ничего не найдено.</p>
+              </div>
 
-                <button class="results__show-more">Показать еще</button>
-            </section>
+              <div class="results__error results__error_request">
+                  <img src="./images/not-found.png" alt="Не найдено" class="results__error-pic">
+                  <p class="results__error-title">Во время запроса произошла ошибка</p>
+                  <p class="results__error-comment">Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.</p>
+              </div>
+
+              <div class="results__card-container"></div>
+
+              <button class="results__show-more">Показать еще</button>
+          </section>
 
             <section class="author">
                 <img src="./images/avatar.jpeg" alt="Аватар" class="author__avatar">
@@ -83,6 +84,6 @@
                 </div>
             </footer>
         </main>
-        <script src="index.a3c9188493c2451cf5b5.js"></script>
+        <script src="index.a41fabff7877bad3a5fd.js"></script>
     </body>
 </html>
