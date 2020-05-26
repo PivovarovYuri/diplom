@@ -30,13 +30,29 @@ export class CardList {
             resultsErrorSearch.classList.remove('results__error_active');
             if (arr['totalResults'] <= 3) {
                 for(let i = 0; i < arr['totalResults']; i++) {
-                    const { cardElement } = new Card(arr['articles'][i]['urlToImage'], `${arr['articles'][i]['publishedAt'].substring(8, 10)} ${getMonthName(arr['articles'][i]['publishedAt'])}, ${arr['articles'][i]['publishedAt'].substring(0, 4)}`, arr['articles'][i]['title'], arr['articles'][i]['description'], arr['articles'][i]['url'], arr['articles'][i]['source']['name']);
+                  const cardData = {
+                    pic: arr['articles'][i]['urlToImage'],
+                    date: `${arr['articles'][i]['publishedAt'].substring(8, 10)} ${getMonthName(arr['articles'][i]['publishedAt'])}, ${arr['articles'][i]['publishedAt'].substring(0, 4)}`,
+                    cardTitle: arr['articles'][i]['title'],
+                    cardText: arr['articles'][i]['description'],
+                    sourceUrl: arr['articles'][i]['url'],
+                    sourceName: arr['articles'][i]['source']['name'],
+                  }
+                    const { cardElement } = new Card(cardData);
                     this.container.appendChild(cardElement);
                     showMoreButton.classList.remove('results__show-more_active');
                 }
             } else {
                 for(let i = 0; i < 3; i++) {
-                    const { cardElement } = new Card(arr['articles'][i]['urlToImage'], `${arr['articles'][i]['publishedAt'].substring(8, 10)} ${getMonthName(arr['articles'][i]['publishedAt'])}, ${arr['articles'][i]['publishedAt'].substring(0, 4)}`, arr['articles'][i]['title'], arr['articles'][i]['description'], arr['articles'][i]['url'], arr['articles'][i]['source']['name']);
+                  const cardData = {
+                    pic: arr['articles'][i]['urlToImage'],
+                    date: `${arr['articles'][i]['publishedAt'].substring(8, 10)} ${getMonthName(arr['articles'][i]['publishedAt'])}, ${arr['articles'][i]['publishedAt'].substring(0, 4)}`,
+                    cardTitle: arr['articles'][i]['title'],
+                    cardText: arr['articles'][i]['description'],
+                    sourceUrl: arr['articles'][i]['url'],
+                    sourceName: arr['articles'][i]['source']['name'],
+                  }
+                    const { cardElement } = new Card(cardData);
                     this.container.appendChild(cardElement);
                     showMoreButton.classList.add('results__show-more_active');
                 }
@@ -46,7 +62,15 @@ export class CardList {
 
     showMoreCards(arr) {
         for(let i = 0; i < arr.length; i++) {
-            const { cardElement } = new Card(arr[i]['urlToImage'], `${arr[i]['publishedAt'].substring(8, 10)} ${getMonthName(arr[i]['publishedAt'])}, ${arr[i]['publishedAt'].substring(0, 4)}`, arr[i]['title'], arr[i]['description'], arr[i]['url'], arr[i]['source']['name']);
+          const cardData = {
+            pic: arr[i]['urlToImage'],
+            date: `${arr[i]['publishedAt'].substring(8, 10)} ${getMonthName(arr[i]['publishedAt'])}, ${arr[i]['publishedAt'].substring(0, 4)}`,
+            cardTitle: arr[i]['title'],
+            cardText: arr[i]['description'],
+            sourceUrl: arr[i]['url'],
+            sourceName: arr[i]['source']['name'],
+          }
+            const { cardElement } = new Card(cardData);
             this.container.appendChild(cardElement);
         }
     }
@@ -63,4 +87,4 @@ export class CardList {
             this.showCards(arr);
         }
     }
-}
+  }

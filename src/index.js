@@ -7,6 +7,7 @@ import {showMoreButton} from './scripts/results-cardList';
 import {resultsCardList} from './scripts/results-cardList';
 import {showPreloader} from './scripts/help-functions';
 import {moreCards} from './scripts/results-cardList';
+import {cardData} from './scripts/results-cardList';
 
 /* Запрос к api и отрисовка карточек */
 const form = document.forms.search;
@@ -46,9 +47,7 @@ form.addEventListener('submit', function(event) {
         document.querySelector('.results__title-container').classList.add('results__title-container_active');
         document.querySelector('.results__card-container').classList.add('results__card-container_active');
 
-        const proxy = 'https://praktikum.tk/'
-        const url = `${proxy}` +
-                'https://newsapi.org/v2/everything?' +
+        const url = 'https://praktikum.tk/news/v2/everything?' +
                 `q=${formInput}&` +
                 `from=${sevenAgo.getFullYear()}-${sevenAgo.getMonth()+1}-${sevenAgo.getDate()}&` +
                 `to=${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}&` +
@@ -60,7 +59,6 @@ form.addEventListener('submit', function(event) {
             .then((result) => {
                 localStorage.resultArray = JSON.stringify(result);
                 localStorage.keyWord = formInput;
-                showMoreButton.addEventListener('click', moreCards(result));
                 return new CardList(resultsCardList).showCards(result);
             })
             .catch((err) => {

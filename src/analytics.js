@@ -16,34 +16,32 @@ if (typeof localStorage.resultArray === 'undefined') {
 
     document.querySelector('.histogram__column-ref-number_this-day').textContent = '0';
     document.querySelector('.histogram__column-ref-number_this-day').style.color = 'black';
+    document.querySelector('.histogram__column-rectangle_this-day').style.width = '0%';
 
     document.querySelector('.histogram__column-ref-number_sixth-day').textContent = '0';
     document.querySelector('.histogram__column-ref-number_sixth-day').style.color = 'black';
+    document.querySelector('.histogram__column-rectangle_sixth-day').style.width = '0%';
 
     document.querySelector('.histogram__column-ref-number_fifth-day').textContent = '0';
     document.querySelector('.histogram__column-ref-number_fifth-day').style.color = 'black';
+    document.querySelector('.histogram__column-rectangle_fifth-day').style.width = '0%';
 
     document.querySelector('.histogram__column-ref-number_fouth-day').textContent = '0';
     document.querySelector('.histogram__column-ref-number_fouth-day').style.color = 'black';
+    document.querySelector('.histogram__column-rectangle_fouth-day').style.width = '0%';
 
     document.querySelector('.histogram__column-ref-number_third-day').textContent = '0';
     document.querySelector('.histogram__column-ref-number_third-day').style.color = 'black';
+    document.querySelector('.histogram__column-rectangle_third-day').style.width = '0%';
 
     document.querySelector('.histogram__column-ref-number_second-day').textContent = '0';
     document.querySelector('.histogram__column-ref-number_second-day').style.color = 'black';
+    document.querySelector('.histogram__column-rectangle_second-day').style.width = '0%';
 
     document.querySelector('.histogram__column-ref-number_first-day').textContent = '0';
     document.querySelector('.histogram__column-ref-number_first-day').style.color = 'black';
-
-    /* Обнуляем длину столбцов */
-
-    document.querySelector('.histogram__column-rectangle_this-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_sixth-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_fifth-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_fouth-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_third-day').style.width = '0%';
-    document.querySelector('.histogram__column-rectangle_second-day').style.width = '0%';
     document.querySelector('.histogram__column-rectangle_first-day').style.width = '0%';
+
 } else {
     const resultArray = JSON.parse(localStorage.resultArray); // Получаем result из localStorage
     const keyWord = localStorage.keyWord; // Получаем ключевое слово из localStorage
