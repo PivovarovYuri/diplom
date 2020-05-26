@@ -3,6 +3,8 @@
   height: 272px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  background-size: cover;
+  background-position: center;
 }
 
 @media all and (min-width : 1000px) and (max-width: 1439px) {

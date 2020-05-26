@@ -3,6 +3,12 @@
   margin-bottom: 18px;
   margin-left: 24px;
   max-width: 325px;
+  position: relative;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -17,12 +23,7 @@
       margin-bottom: 12px;
       margin-left: 16px;
       max-width: 250px;
-      position: relative;
-    display: -webkit-box;
     -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
@@ -32,12 +33,7 @@
       margin-bottom: 12px;
       margin-left: 16px;
       max-width: 192px;
-      position: relative;
-    display: -webkit-box;
     -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
@@ -47,11 +43,6 @@
       margin-bottom: 5px;
       margin-left: 16px;
       max-width: 256px;
-      position: relative;
-    display: -webkit-box;
     -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
