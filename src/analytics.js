@@ -86,7 +86,7 @@ if (typeof localStorage.resultArray === 'undefined') {
 
     /* Получаем массив заголовков или описаний и преобразуем его в строку */
     function getKeyArray(array, key) {
-        let arr = [];
+      const arr = [];
         for (let i = 0; i < array.length; i++) {
             arr.push(array[i][key].toLowerCase());
         }
@@ -109,11 +109,13 @@ if (typeof localStorage.resultArray === 'undefined') {
 
     /* Получаем массивы статей по дням (каждому дню - массив статей обубликованных в этот день) */
     function separateArticlesForDays(array, date) {
-        let arrDay = [];
-        for (let i = 0; i < array['articles'].length; i++) {
-            array['articles'][i]['publishedAt'].substring(0, 10) === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}` ? arrDay.push(array['articles'][i]) : false;
-        }
-        return arrDay;
+      const arrDay = [];
+      for (let i = 0; i < array['articles'].length; i++) {
+          if ((array['articles'][i]['publishedAt'].substr(0, 10) === `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`) || (array['articles'][i]['publishedAt'].substr(0, 10) === `${date.getFullYear()}-0${date.getMonth()+1}-0${date.getDate()}`) || (array['articles'][i]['publishedAt'].substr(0, 10) === `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`) || (array['articles'][i]['publishedAt'].substr(0, 10) === `${date.getFullYear()}-${date.getMonth()+1}-0${date.getDate()}`)) {
+              arrDay.push(array['articles'][i]);
+          }
+      }
+      return arrDay;
     }
 
     const arrThisDay = separateArticlesForDays(resultArray, now);
